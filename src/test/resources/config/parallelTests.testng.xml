@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="App Consumer Tests" data-provider-thread-count="6" parallel="tests">
+    <test name="App Consumer Tests">
+        <classes>
+            <class name="com.pipefy.runners.ParallelRunner"/>
+            <class name="com.pipefy.runners.ParallelReRunRunner"/>
+        </classes>
+    </test>
+</suite>

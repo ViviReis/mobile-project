@@ -1,0 +1,20 @@
+# Maven Reports
+/target/**
+
+# Intellij
+.run/
+.idea/
+*.iml
+*.iws
+.settings
+/config/local.properties
+/runners/RunTest.java
+
+# Mac
+.DS_Store
+
+#Report
+/output/**
+
+#Log4j
+log4j.log
