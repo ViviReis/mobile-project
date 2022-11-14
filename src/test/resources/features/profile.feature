@@ -1,4 +1,4 @@
-@profile @vivi
+@profile
 Feature: Profile
 
   Scenario: User should be able to see organization info

@@ -1,4 +1,4 @@
-@login @vivi
+@login
 Feature: Login
 
   Scenario: User should be able to login using valid email and password
