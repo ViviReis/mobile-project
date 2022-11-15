@@ -1,15 +1,16 @@
 ## Mobile Project
 
-This project contains the automation UI tests for iFood Consumer App (Android and iOS).
+This project contains the automation UI tests for pipefy app (Android).
 
-###  Setup
+### Setup
 The following guidelines explain how to setup your local environment to be able to develop and run the automated tests.
 #### 1. Install basic tools
 
-[Android Studio](https://developer.android.com/studio)
+- [Android Studio](https://developer.android.com/studio)
+- Create a device and set its name in `android.deviceName` variable in `src/main/resources/local.properties` file
 
 #### 2. Install other dependencies
-   Open a terminal and install the following packages:
+Open a terminal and install the following packages:
 
 Node
 ````
@@ -67,16 +68,28 @@ Save .zprofile file
 $ source .zprofile
 ````
 
-#### 5. Set the following arguments:
-- In test kin select -> Suite
-- Define how you would like to run test
+#### 5. Configure IntelliJ
 
+The standard IDE used to run our automation framework is IntelliJ. Feel free to use any IDE you might prefer, but be aware that the configs are not going to be the same as described in this section.
+
+If you do not have IntelliJ installed, you can install it directly or via Toolbox
+
+[Direct Link](https://www.jetbrains.com/pt-br/idea/download/)
+
+[Toolbox (recommended)](https://www.jetbrains.com/pt-br/toolbox-app/)
+
+### Run tests:
+
+- Edit configurations
+- Add new configuratiob -> TestNG
+- In test kind select -> Suite
+- Define how you would like to run test
 Example:
 ````
 mobile-project/src/test/resources/config/singleTestsWithoutRerun.testng.xml
 ````
 
-- In VM options:
+- In VM options set:
 ````
 -ea
 -Dplatform=android
@@ -84,3 +97,5 @@ mobile-project/src/test/resources/config/singleTestsWithoutRerun.testng.xml
 -Dcucumber.filter.tags="@vivi"
 -DappPath=/Users/vivianereis/test/Downloads/pipefy-workflow-processes_2.2.1.apk
 ````
+
+- Play it 
