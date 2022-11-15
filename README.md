@@ -4,12 +4,18 @@ This project contains the automation UI tests for pipefy app (Android).
 
 ### Setup
 The following guidelines explain how to setup your local environment to be able to develop and run the automated tests.
-#### 1. Install basic tools
+
+#### 1. Clone the project via command line:
+```
+git clone git@github.com:ViviReis/mobile-project.git
+```
+
+#### 2. Install basic tools
 
 - [Android Studio](https://developer.android.com/studio)
 - Create a device and set its name in `android.deviceName` variable in `src/main/resources/local.properties` file
 
-#### 2. Install other dependencies
+#### 3. Install other dependencies
 Open a terminal and install the following packages:
 
 Node
@@ -32,13 +38,13 @@ Doctor
 $ brew doctor
 ````
 
-#### 3. Java setup
+#### 4. Java setup
 
 ````
 $ brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
 ````
 
-#### 4. Setup environment variables
+#### 5. Setup environment variables
    Create a new file on the user’s root directory called .zprofile and set the environment variables.
 
 ````
@@ -68,7 +74,7 @@ Save .zprofile file
 $ source .zprofile
 ````
 
-#### 5. Configure IntelliJ
+#### 6. Configure IntelliJ
 
 The standard IDE used to run our automation framework is IntelliJ. Feel free to use any IDE you might prefer, but be aware that the configs are not going to be the same as described in this section.
 
@@ -80,6 +86,7 @@ If you do not have IntelliJ installed, you can install it directly or via Toolbo
 
 ### Run tests:
 
+- Download app [here](https://drive.google.com/drive/folders/1MoHDMFKJNoEzQA26aC9QKCSOcBe00UuB)
 - Edit configurations
 - Add new configuratiob -> TestNG
 - In test kind select -> Suite
@@ -94,8 +101,8 @@ mobile-project/src/test/resources/config/singleTestsWithoutRerun.testng.xml
 -ea
 -Dplatform=android
 -Denvironment=local
--Dcucumber.filter.tags="@vivi"
--DappPath=/Users/vivianereis/test/Downloads/pipefy-workflow-processes_2.2.1.apk
+-Dcucumber.filter.tags="@login"
+-DappPath=${path}/pipefy-workflow-processes_2.2.1.apk
 ````
 
 - Play it 
